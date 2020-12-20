@@ -38,14 +38,22 @@
       }
 
     </style>
+    <script>
+      function modeChange() {
+        if (document.querySelector('#modeChange').value === 'night') {
+          document.querySelector('body').style.backgroundColor = 'black'; document.querySelector('body').style.color = 'white'; value = 'day';
+        } else { document.querySelector('body').style.backgroundColor = 'white'; document.querySelector('body').style.color = 'black'; value = 'night' }
+      }
+    </script>
   </head>
 
   <body>
     <!-- 제목 -->
-    <input type="button" , value="야간 모드" ,
-      onclick="document.querySelector('body').style.backgroundColor='black', color='white'; document.querySelector('body').style.color='white';"><br><br>
-    <input type="button" , value="주간 모드" ,
-      onclick="document.querySelector('body').style.backgroundColor='white'; document.querySelector('body').style.color='black';">
+    <input id="modeChange" , type="button" , value="night" ,
+      onclick="if(document.querySelector('#modeChange').value === 'night'){
+      document.querySelector('body').style.backgroundColor='black'; document.querySelector('body').style.color='white'; value='day';} else {document.querySelector('body').style.backgroundColor='white'; document.querySelector('body').style.color='black'; value='night'}">
+
+    <input type="button" , value="night" , onclick="modeChange()">
 
     <h1 id="제목">THE&nbsp;&nbsp;Crew</h1>
 
