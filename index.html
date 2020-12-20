@@ -2,44 +2,72 @@
 <html>
 
   <head>
-    <title>히쑤의 웹</title> <!-- 제목 -->
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <title>히쑤의 웹</title>
     <style>
-      h1.WebNameDefault {
-        border-bottom-style: none;
+      #제목 {
+        text-align: center;
+        color: black;
+        border-bottom: green 2px solid;
+        padding-bottom: 15px;
+        margin-bottom: 0;
+        margin-top: 0;
       }
 
-      h1.WebNameBorder {
-        border: 2px solid black;
-        display: inline;
+      .배너 {
+        border-right: 1px green solid;
+        width: 150px;
+        margin-top: 0;
+        padding-top: 15px;
+        padding-left: 34px;
+        margin-bottom: 15px;
+      }
 
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 240px 2fr;
       }
 
     </style>
   </head>
 
   <body>
-    <!-- 웹 페이지 네이밍 -->
-    <h1 class="WebNameBorder WebNameDefault"><a href="index.html">COMMUNITY
-      </a></h1>
-    <!-- <h2>HTML</h2> -->
-    <ol>
-      <li><a href=" 1.html" , title="HTML"><span class="lihtml">HTML</span>
-        </a></li>
-      <li><a href="2.html" , title="CSS">CSS</a></li>
-      <li><a href="3.html" , title="JavaScript">JavaScript</a></li>
-    </ol>
+    <!-- 제목 -->
+    <input type="button" , value="야간 모드" ,
+      onclick="document.querySelector('body').style.backgroundColor='black', color='white'; document.querySelector('body').style.color='white';"><br><br>
+    <input type="button" , value="주간 모드" ,
+      onclick="document.querySelector('body').style.backgroundColor='white'; document.querySelector('body').style.color='black';">
 
-    <p>나는 오늘 밥을 먹었다. 아침은 거르고 점심은 먹었지만, 게장을 다 먹었으며, 점심밥을 <a href="https://unsplash.com/photos/zXNC_lBBVGE" , target="blank" , title="맛있는 밥 사진">
-        <font color="black">오뚜기</font>
-      </a>
-      큰 밥으로 2개씩이나 먹었다.<br>그래서 배가 너무 부르다.. 저녁은 굶을 예정이다.</p><br>
-    <p style="text-align: center;">그래서 <strong style="text-decoration: underline;color: deeppink;">코딩이란 무엇인가?</strong>에 대해 영상으로 정의해보았다.
-    </p>
-    <p><iframe width="100%" height="750" src="https://www.youtube.com/embed/03VG0t7pSUM" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-    <img src="coding.jpg" , width=100%>
-    <p style=margin-top:24>오늘 저녁부터 지속적으로 눈이 올 것 같은 느낌이든다. 그래서 내일 아침에 기상 후 출근을 하게된다면 제설작전을 통제하게 될 것 같다....</stylep>
+    <h1 id="제목">THE&nbsp;&nbsp;Crew</h1>
+
+    <div class="grid">
+      <ol class="배너">
+        <li><a href="notice.html">공지사항</a></li>
+        <li><a href="notice_board.html">게시판</a></li>
+        <li><a href="chat.html">채팅</a></li>
+        <li><a href="admin.html">관리자 전용</a></li>
+        <li>테스트 전용</li>
+        <li>테스트 전용</li>
+        <li>테스트 전용</li>
+        <li>테스트 전용</li>
+        <li>테스트 전용</li>
+        <li>테스트 전용</li>
+      </ol>
+      <div id="본문">
+        <h1>자기소개</h1>
+        안녕하세요.
+        선희수에요.
+      </div>
+    </div>
   </body>
 
 </html>
