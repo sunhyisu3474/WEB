@@ -7,7 +7,6 @@
     <style>
       #제목 {
         text-align: center;
-        color: black;
         border-bottom: green 2px solid;
         padding-bottom: 15px;
         margin-bottom: 0;
@@ -38,23 +37,36 @@
       }
 
     </style>
-    <script>
-      function modeChange() {
-        if (document.querySelector('#modeChange').value === 'night') {
-          document.querySelector('body').style.backgroundColor = 'black'; document.querySelector('body').style.color = 'white'; value = 'day';
-        } else { document.querySelector('body').style.backgroundColor = 'white'; document.querySelector('body').style.color = 'black'; value = 'night' }
-      }
-    </script>
   </head>
 
   <body>
+
+    <script>
+      function setColor(color) {
+        var alist = document.querySelectorAll('a');
+        for (var i = 0; i < alist.length; i++) {
+          alist[i].style.color = color;
+        }
+      }
+      function modeChange(self) {
+        var target = document.querySelector('body');
+        if (self.value === 'night') {  /* 야간모드로 변경 */
+          target.style.backgroundColor = 'black';
+          target.style.color = 'white';
+          setColor('white');
+          self.value = 'day';
+        } else {  /* 주간모드로 변경 */
+          target.style.backgroundColor = 'white';
+          target.style.color = 'black';
+          self.value = 'night';
+          setColor('black');
+        }
+      }
+    </script>
+
+    <input type="button" , value="night" , onclick="modeChange(this)">
+
     <!-- 제목 -->
-    <input id="modeChange" , type="button" , value="night" ,
-      onclick="if(document.querySelector('#modeChange').value === 'night'){
-      document.querySelector('body').style.backgroundColor='black'; document.querySelector('body').style.color='white'; value='day';} else {document.querySelector('body').style.backgroundColor='white'; document.querySelector('body').style.color='black'; value='night'}">
-
-    <input type="button" , value="night" , onclick="modeChange()">
-
     <h1 id="제목">THE&nbsp;&nbsp;Crew</h1>
 
     <div class="grid">
