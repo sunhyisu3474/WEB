@@ -2,7 +2,9 @@
 <html>
 
   <head>
+    <script src="index.js"></script>
     <meta charset="UTF-8">
+
     <title>히쑤의 웹</title>
     <style>
       #제목 {
@@ -16,7 +18,7 @@
       .배너 {
         border-right: 1px green solid;
         width: 150px;
-        margin-top: 1;
+        margin-top: 0;
         padding-top: 15px;
         padding-left: 34px;
         margin-bottom: 15px;
@@ -41,30 +43,7 @@
 
   <body>
 
-    <script>
-      function setColor(color) {
-        var alist = document.querySelectorAll('a');
-        for (var i = 0; i < alist.length; i++) {
-          alist[i].style.color = color;
-        }
-      }
-      function modeChange(self) {
-        var target = document.querySelector('body');
-        if (self.value === 'night') {  /* 야간모드로 변경 */
-          target.style.backgroundColor = 'black';
-          target.style.color = 'white';
-          setColor('white');
-          self.value = 'day';
-        } else {  /* 주간모드로 변경 */
-          target.style.backgroundColor = 'white';
-          target.style.color = 'black';
-          self.value = 'night';
-          setColor('black');
-        }
-      }
-    </script>
-
-    <input type="button" , value="night" , onclick="modeChange(this)">
+    <input type="button" , value="night" , onclick="setBody.modeChange(this)">
 
     <!-- 제목 -->
     <h1 id="제목">THE&nbsp;&nbsp;Crew</h1>
