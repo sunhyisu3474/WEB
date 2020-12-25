@@ -1,0 +1,40 @@
+#top{
+  text-align: center;
+  border-bottom: 2px solid;
+  font-size: 45px;
+  margin-bottom: 24px;
+}
+
+body{
+  margin: 0;
+}
+
+.outBox{
+  border: 2px solid green;
+  padding: 15px;
+}
+
+.input{
+  text-align: center;
+}
+
+.send{
+  text-align: right;
+  border: 1px solid;
+  display: inline;
+  font-size: 15px;
+}
+
+.text{
+  display: inline;
+  border: 1px solid;
+  height: 20px;
+  width: 700px;
+}
+
+.output{
+  border: 1px solid;
+  height: 150px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
