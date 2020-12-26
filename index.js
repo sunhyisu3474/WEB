@@ -71,3 +71,15 @@ FB.getLoginStatus(function (response) {
     console.log(response.authResponse.accessToken);
   }
 });
+
+FB.api('/me', function (response) {
+  console.log(JSON.stringify(response));
+});
+
+var finished_rendering = function () {
+  console.log("finished rendering plugins");
+  var spinner = document.getElementById("spinner");
+  spinner.removeAttribute("style");
+  spinner.removeChild(spinner.childNodes[0]);
+}
+FB.Event.subscribe('xfbml.render', finished_rendering);
