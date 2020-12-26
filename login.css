@@ -1,0 +1,16 @@
+body{
+}
+
+.loginContainer{
+  width: 240px;
+  margin-top: 200px;
+  margin-inline: 240px;
+}
+
+.inputAccount{
+}
+
+#login{
+  float: right;
+  margin-top: 11px;
+}
