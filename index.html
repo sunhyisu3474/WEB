@@ -20,6 +20,11 @@
         var callback = function (response) {
           console.log(response);
           // statusChagneCallback(response);
+          if (response.value === 'connected') {
+            document.querySelector('#authBtn') = LOGOUT;
+          } else {
+            document.querySelector('#authBtn') = LOGIN;
+          }
         }
         FB.getLoginStatus(callback);
       };
@@ -47,6 +52,7 @@
   </head>
 
   <body>
+    <label id="authBtn" , for="_blank">미접속</label>
     <!-- facebook login button start -->
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous"
