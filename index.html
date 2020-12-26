@@ -17,9 +17,10 @@
         });
 
         /* facebook login status start */
-        FB.getLoginStatus(function (response) {
-          statusChangeCallback(response);
-        });
+        var callback = function (response) {
+          statusChagneCallback(response);
+        }
+        FB.getLoginStatus(callback);
       };
       /* facebook login status end */
 
