@@ -3,6 +3,8 @@
 
   <head>
     <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
 
     <!-- facebook login scripts start -->
     <script>
@@ -14,9 +16,14 @@
           version: '9.0'
         });
 
-        FB.AppEvents.logPageView();
+        /* facebook login status start */
+        FB.getLoginStatus(function (response) {
+          statusChangeCallback(response);
+        });
       };
+      /* facebook login status end */
 
+      /* facebook SDK loading start */
       (function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) { return; }
@@ -24,18 +31,13 @@
         js.src = "https://connect.facebook.net/en_US/sdk.js";
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
+      /* facebook SDK loading end */
 
-      FB.getLoginStatus(function (response) {
-        statusChangeCallback(response);
-      });
     </script>
     <!-- facebook login scripts end -->
 
     <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
     </fb:login-button>
-
-    <link rel="stylesheet" href="index.css">
-    <meta charset="UTF-8">
 
     <title>히쑤의 웹</title>
     <style>
