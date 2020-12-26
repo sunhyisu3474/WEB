@@ -65,3 +65,9 @@ function testAPI() {                      // Testing Graph API after login.  See
       'Thanks for logging in, ' + response.name + '!';
   });
 }
+
+FB.getLoginStatus(function (response) {
+  if (response.status === 'connected') {
+    console.log(response.authResponse.accessToken);
+  }
+});
