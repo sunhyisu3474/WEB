@@ -37,7 +37,7 @@ window.fbAsyncInit = function () {
   var callback = function (response) {
     console.log(response);
     // statusChagneCallback(response);
-    if (response.value === 'connected') {
+    if (response.status === 'connected') {
       document.querySelector('#authBtn').value = LOGOUT;
     } else {
       document.querySelector('#authBtn').value = LOGIN;
