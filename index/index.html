@@ -16,6 +16,12 @@
 
       };
 
+      var callback = function (response) {
+        console.log(response);
+        // statusChangeCallback(response);
+      }
+      FB.getLoginStatus(callback);
+
       (function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) { return; }
@@ -24,11 +30,6 @@
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
 
-      var callback = function (response) {
-        console.log(response);
-        // statusChangeCallback(response);
-      }
-      FB.getLoginStatus(callback);
     </script>
 
 
