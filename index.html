@@ -18,7 +18,8 @@
 
         /* facebook login status start */
         var callback = function (response) {
-          statusChagneCallback(response);
+          console.log(response);
+          // statusChagneCallback(response);
         }
         FB.getLoginStatus(callback);
       };
@@ -53,8 +54,10 @@
 
     <div class="fb-login-button" data-width="" data-size="large" data-button-type="login_with" data-layout="rounded" data-auto-logout-link="true"
       data-use-continue-as="true"></div>
-    <!-- facebook login button end -->
 
+    <!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+      </fb:login-button> -->
+    <!-- facebook login button end -->
 
     <!-- 제목 -->
     <div class="top">
