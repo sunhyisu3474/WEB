@@ -52,6 +52,15 @@
       src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v9.0&appId=728053824777344&autoLogAppEvents=1" nonce="pQkFBUkd"></script>
     <!-- facebook login button end -->
 
+    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+    </fb:login-button>
+
+    function checkLoginState() {
+    FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+    });
+    }
+
     <!-- 제목 -->
     <div class="top">
       <span id="modeChange">
