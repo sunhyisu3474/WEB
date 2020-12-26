@@ -30,7 +30,7 @@ window.fbAsyncInit = function () {
     appId: '728053824777344',
     cookie: true,
     xfbml: true,
-    version: '2.2'
+    version: '9.0'
   });
 
   /* facebook login status start */
