@@ -33,19 +33,9 @@ window.fbAsyncInit = function () {
     version: '9.0'
   });
 
-  /* facebook login status start */
-  var callback = function (response) {
-    console.log(response);
-    // statusChagneCallback(response);
-    if (response.status === 'connected') {
-      document.querySelector('#authBtn').value = 'LOGOUT';
-    } else {
-      document.querySelector('#authBtn').value = 'LOGIN';
-    }
-  }
-  FB.getLoginStatus(callback);
+  FB.AppEvents.logPageView();
+
 };
-/* facebook login status end */
 
 /* facebook SDK loading start */
 (function (d, s, id) {
@@ -55,5 +45,12 @@ window.fbAsyncInit = function () {
   js.src = "https://connect.facebook.net/en_US/sdk.js";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
-      /* facebook SDK loading end */
+/* facebook SDK loading end */
+
+/* facebook login status start */
+
+FB.getLoginStatus(function (response) {
+  statusChangeCallback(response);
+});
+/* facebook login status end */
 /* facebook login scripts end */
