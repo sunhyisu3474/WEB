@@ -36,8 +36,8 @@
     </script>
     <!-- facebook login scripts end -->
 
-    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-    </fb:login-button>
+    <!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+    </fb:login-button> -->
 
     <title>히쑤의 웹</title>
     <style>
@@ -46,20 +46,15 @@
 
   <body>
     <!-- facebook login button start -->
-    <div class="fb-login-button" data-width="" data-size="medium" data-button-type="login_with" data-layout="rounded" data-auto-logout-link="true"
+    <div class="fb-login-button" data-width="" data-size="large" data-button-type="login_with" data-layout="rounded" data-auto-logout-link="true"
       data-use-continue-as="true"></div>
+
     <script async defer crossorigin="anonymous"
-      src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v9.0&appId=728053824777344&autoLogAppEvents=1" nonce="pQkFBUkd"></script>
+      src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v9.0&appId=728053824777344&autoLogAppEvents=1" nonce="cs1wKSJ7"></script>
+
+
     <!-- facebook login button end -->
 
-    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-    </fb:login-button>
-
-    function checkLoginState() {
-    FB.getLoginStatus(function(response) {
-    statusChangeCallback(response);
-    });
-    }
 
     <!-- 제목 -->
     <div class="top">
