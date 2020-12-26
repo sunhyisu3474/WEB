@@ -17,16 +17,16 @@
   <body>
     <input id="authBtn" type="button" , value="checking..">
 
-    <!-- facebook login button start -->
-    <!-- <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous"
-      src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v9.0&appId=728053824777344&autoLogAppEvents=1" nonce="cs1wKSJ7"></script>
-
-    <div class="fb-login-button" data-width="" data-size="large" data-button-type="login_with" data-layout="rounded" data-auto-logout-link="true"
-      data-use-continue-as="true"></div> -->
-    <!-- facebook login button end -->
-
     <!-- 제목 -->
+    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+    </fb:login-button>
+
+    <div id="status">
+    </div>
+
+    <!-- Load the JS SDK asynchronously -->
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+
     <div class="top">
       <span id="modeChange">
         <input type="button" , value="night" , onclick="setBody.modeChange(this)">
