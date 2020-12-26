@@ -23,3 +23,37 @@ var setBody = {
     }
   }
 }
+
+/* facebook login scripts start */
+window.fbAsyncInit = function () {
+  FB.init({
+    appId: '728053824777344',
+    cookie: true,
+    xfbml: true,
+    version: '9.0'
+  });
+
+  /* facebook login status start */
+  var callback = function (response) {
+    console.log(response);
+    // statusChagneCallback(response);
+    if (response.value === 'connected') {
+      document.querySelector('#authBtn') = LOGOUT;
+    } else {
+      document.querySelector('#authBtn') = LOGIN;
+    }
+  }
+  FB.getLoginStatus(callback);
+};
+/* facebook login status end */
+
+/* facebook SDK loading start */
+(function (d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) { return; }
+  js = d.createElement(s); js.id = id;
+  js.src = "https://connect.facebook.net/en_US/sdk.js";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+      /* facebook SDK loading end */
+/* facebook login scripts end */
