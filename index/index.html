@@ -4,7 +4,7 @@
   <head>
     <script src="index.js"></script>
     <!-- Load the JS SDK asynchronously -->
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js">
+    <script>
       window.fbAsyncInit = function () {
         FB.init({
           appId: '728053824777344',
@@ -21,6 +21,7 @@
         FB.getLoginStatus(callback);
       };
     </script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
     <link rel="stylesheet" href="index.css">
     <meta charset="UTF-8">
 
