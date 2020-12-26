@@ -3,7 +3,8 @@
 
   <head>
     <script src="index.js"></script>
-    <!-- facebook login scripts -->
+
+    <!-- facebook login scripts start -->
     <script>
       window.fbAsyncInit = function () {
         FB.init({
@@ -27,14 +28,11 @@
       FB.getLoginStatus(function (response) {
         statusChangeCallback(response);
       });
-
-
-      FB.getLoginStatus(function (response) {
-        statusChangeCallback(response);
-      });
-
     </script>
+    <!-- facebook login scripts end -->
 
+    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+    </fb:login-button>
 
     <link rel="stylesheet" href="index.css">
     <meta charset="UTF-8">
@@ -45,6 +43,14 @@
   </head>
 
   <body>
+    <!-- facebook login button start -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+      src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v9.0&appId=728053824777344&autoLogAppEvents=1" nonce="pQkFBUkd"></script>
+
+    <div class="fb-login-button" data-width="" data-size="medium" data-button-type="login_with" data-layout="rounded" data-auto-logout-link="true"
+      data-use-continue-as="true"></div>
+    <!-- facebook login button end -->
 
     <!-- 제목 -->
     <div class="top">
